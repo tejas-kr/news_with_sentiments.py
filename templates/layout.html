@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>{% block title %}{% endblock %}</title>
+	<link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
+	<link rel="stylesheet" href="{{url_for('static', filename='boot.css')}}">
+	<link rel="stylesheet" href="{{url_for('static', filename='foot.css')}}">
+</head>
+<body>
+	<div class="container">
+      	<div class="header clearfix">
+			<nav>
+				<ul class="nav nav-pills pull-right">
+					<li role="presentation"><a href="#">About</a></li>
+					<li role="presentation"><a href="https://tejas-kr.github.io">Know the Developer</a></li>
+				</ul>
+			</nav>
+			<h3 class="text-muted">news with sentiments</h3>
+      	</div>
+		{% block body %}{% endblock %}
+		<footer class="footer">
+			<div class="container">
+			<p class="text-muted">Developed by Tejas Kumar Jaiswal</p>
+			</div>
+	    </footer>
+
+	</div>
+</body>
+</html>
